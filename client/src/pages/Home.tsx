@@ -1,12 +1,13 @@
 import { FormEvent, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { scrape } from "../services/scrape";
 
 function Home() {
     const urlRef = useRef<HTMLInputElement>(null);
     const tagsRef = useRef<HTMLInputElement>(null);
-    const [scrapedData, setScrapedData] = useState<any>(null);  // Changed to `any` for complex data handling
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate(); // Initialize navigate
 
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
@@ -19,7 +20,7 @@ function Home() {
         const website = {
             url: urlRef.current.value.trim(),
             tags: tagsRef.current?.value.trim() || "",
-            type: "scraping" as "scraping",  // Explicitly typed as "scraping"
+            type: "scraping" as "scraping",
         };
 
         setLoading(true);
@@ -27,25 +28,10 @@ function Home() {
 
         try {
             const data = await scrape(website);
-            console.log("Backend Response:", data); // Debugging
+            console.log("Backend Response:", data);
 
-            // Check the type of the received data
-            console.log("Type of data:", typeof data);  // Logs the type of the response
-
-            // Check if the response is an object, array, or string
-            if (Array.isArray(data)) {
-                console.log("data is an array:", data);
-                setScrapedData(data); // Directly store the array
-            } else if (typeof data === "object") {
-                console.log("data is an object:", data);
-                setScrapedData(data); // Directly store the object
-            } else if (typeof data === "string") {
-                console.log("data is a string:", data);
-                setScrapedData(data || "No data received");
-            } else {
-                console.log("data is of unknown type:", data);
-                setError("Unexpected response format.");
-            }
+            // Navigate to the new page with scraped data
+            navigate("/scraped-data", { state: { data } });
         } catch (error) {
             setError("Scraping failed.");
             console.error("Error:", error);
@@ -82,16 +68,7 @@ function Home() {
                 </div>
             </form>
 
-            {/* Error Handling */}
             {error && <p className="text-danger">{error}</p>}
-
-            {/* Display scraped data */}
-            {scrapedData && (
-                <div className="overflow-auto mt-3">
-                    <h3>Scraped Data:</h3>
-                    <pre>{JSON.stringify(scrapedData, null, 2)}</pre> {/* JSON stringified with proper formatting */}
-                </div>
-            )}
         </>
     );
 }

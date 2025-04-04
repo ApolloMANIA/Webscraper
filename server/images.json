@@ -1,0 +1,29 @@
+{
+    "url": "https://en.wikipedia.org/wiki/Main_Page",
+    "images": [
+        "/static/images/icons/wikipedia.png",
+        "/static/images/mobile/copyright/wikipedia-wordmark-en.svg",
+        "/static/images/mobile/copyright/wikipedia-tagline-en.svg",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/2014_Aston_Martin_Vanquish%2C_skyfall_silver.jpg/250px-2014_Aston_Martin_Vanquish%2C_skyfall_silver.jpg",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Burlesque%2C_1927_sheet_music.png/121px-Burlesque%2C_1927_sheet_music.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Riek_Machar_with_his_wife_Angelina_Teny.jpg/162px-Riek_Machar_with_his_wife_Angelina_Teny.jpg",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/88-90_Hatton_Garden%2C_front_door_TQ3181_U23_%28perspective%29.jpg/250px-88-90_Hatton_Garden%2C_front_door_TQ3181_U23_%28perspective%29.jpg",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/CA-84_Woodside_April_2023_002.jpg/500px-CA-84_Woodside_April_2023_002.jpg",
+        "//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/35px-MediaWiki-2020-icon.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/35px-Wikibooks-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/47px-Wikidata-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/41px-Wikiversity_logo_2017.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+        "//upload.wikimedia.org/wikipedia/en/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png",
+        "//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/41px-Wiktionary-logo.svg.png",
+        "https://auth.wikimedia.org/loginwiki/wiki/Special:CentralAutoLogin/start?useformat=desktop&type=1x1&usesul3=1",
+        "/static/images/footer/wikimedia.svg",
+        "/w/resources/assets/mediawiki_compact.svg"
+    ]
+}

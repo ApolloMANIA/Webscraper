@@ -16,9 +16,13 @@ app.use(cors(corsOptions));
  * getPythonData gets URL and returns a callback with scraped data.
  */
 function getPythonData(url, script, tags, callback) {
-  const pythonProcess = spawn("python3", [script, url, tags]);  // Ensure URL and tags are passed correctly
+  // Split tags by commas and pass them as separate arguments
+  const tagsArray = tags.split(',');  // This turns "div,h1,h2" into ["div", "h1", "h2"]
+
+  const pythonProcess = spawn("python3", [script, url, ...tagsArray]);
+
   let dataFromPy = "";
-  
+
   pythonProcess.stdout.on("data", (data) => {
     dataFromPy += data.toString();
   });
@@ -34,6 +38,7 @@ function getPythonData(url, script, tags, callback) {
     callback(dataFromPy);
   });
 }
+
 
 // Execute a user-provided script with a URL
 function executeUserScript(url, script, callback) {
